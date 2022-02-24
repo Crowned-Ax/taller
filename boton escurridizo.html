@@ -1,0 +1,36 @@
+<HTML>
+
+<HEAD>
+
+    <TITLE>JavaScript</TITLE>
+
+    <script Language="JavaScript">
+
+	function set_background() {
+	  // get a list of all the body elements (there will only be one),
+	  // and then select the zeroth (or first) such element
+	  myBody = document.getElementsByTagName("body")[0];
+
+	  // now, get all the p elements that are descendants of the body
+	  myBodyElements = myBody.getElementsByTagName("p");
+
+	  // get the second item of the list of p elements
+	  myP = myBodyElements[1];
+	  myP.style.background = "rgb(255,0,0)";
+	}
+  function evento(){
+    obj = document.querySelector("#ac");
+    obj.style.position = "absolute";
+    obj.style.left = Math.random()*500 ;
+    //obj.style.bottom = Math.random()*10;
+    obj.style.top = Math.random()*500 ;
+  }
+
+    </script>
+</HEAD>
+<body>
+  <input type="button" id="ac" value="Clikeame" onmouseover="evento()" onclick="set_background()">
+  <p>hi</p>
+  <p>hello</p>
+</body>
+</HTML>
